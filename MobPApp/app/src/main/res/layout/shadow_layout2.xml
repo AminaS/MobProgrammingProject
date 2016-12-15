@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foodback5">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.14">
+
+
+        <ImageButton
+            android:layout_width="191dp"
+            android:layout_height="240dp"
+            app:srcCompat="@drawable/chihuahuaicon"
+            android:id="@+id/imageButton7"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:background="#0000"/>
+
+        <ImageButton
+            android:layout_width="400dp"
+            android:layout_height="220dp"
+            app:srcCompat="@drawable/kittenshadow"
+            android:id="@+id/imageButton9"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitXY"
+            android:background="#0000"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.07">
+
+        <ImageButton
+            android:layout_width="191dp"
+            android:layout_height="240dp"
+            app:srcCompat="@drawable/chihuahuashadow"
+            android:id="@+id/shadow2correct"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:background="#0000"/>
+
+        <ImageButton
+            android:layout_width="200dp"
+            android:layout_height="248dp"
+            app:srcCompat="@drawable/dogshadow"
+            android:id="@+id/food2correct"
+            android:scaleType="fitXY"
+            android:layout_marginTop="0dp"
+            android:background="#0000"/>
+    </LinearLayout>
+
+</LinearLayout>

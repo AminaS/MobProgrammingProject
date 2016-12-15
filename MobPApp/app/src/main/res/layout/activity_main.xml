@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/back1"
+    android:background="@drawable/animalscreen1"
     tools:context="com.example.amina.mobpapp.MainActivity">
 
     <ImageButton
@@ -40,84 +40,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        app:srcCompat="@drawable/gr"
-        android:scaleType="fitXY"
-        android:background="#0000"
-        android:id="@+id/menuButton2"
-        android:layout_below="@+id/menuButton1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="13dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        app:srcCompat="@drawable/puppyicon"
-        android:scaleType="fitXY"
-        android:background="#0000"
-        android:id="@+id/imagePuppy"
-        android:layout_above="@+id/endButton"
-        android:layout_alignLeft="@+id/imageMouse"
-        android:layout_alignStart="@+id/imageMouse" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        app:srcCompat="@drawable/s"
-        android:scaleType="fitXY"
-        android:background="#0000"
-        android:id="@+id/imagePuppyS"
-        android:layout_alignBottom="@+id/menuButton2"
-        android:layout_alignRight="@+id/imagePuppy"
-        android:layout_alignEnd="@+id/imagePuppy"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="18dp" />
-
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        app:srcCompat="@drawable/gr"
-        android:scaleType="fitXY"
-        android:background="#0000"
-        android:id="@+id/menuButton1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        app:srcCompat="@drawable/mouseicon"
-        android:scaleType="fitXY"
-        android:background="#0000"
-        android:id="@+id/imageMouse"
-        android:layout_above="@+id/menuButton2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp" />
-
-    <ImageView
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        app:srcCompat="@drawable/sheepico"
-        android:scaleType="fitXY"
-        android:background="#0000"
-        android:id="@+id/imageSheep"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_toRightOf="@+id/imagePuppyS"
-        android:layout_toEndOf="@+id/imagePuppyS"
-        android:layout_alignTop="@+id/menuButton2"
-        android:layout_above="@+id/imagePuppy" />
 
     <ImageView
         android:layout_width="100dp"
@@ -134,9 +56,9 @@
         android:layout_marginTop="13dp" />
 
     <ImageView
-        android:layout_width="130dp"
+        android:layout_width="120dp"
         android:layout_height="130dp"
-        app:srcCompat="@drawable/puppyshadow"
+        app:srcCompat="@drawable/chickenshadow"
         android:scaleType="fitXY"
         android:background="#0000"
         android:id="@+id/imagePuppyShadow"
@@ -144,5 +66,91 @@
         android:layout_alignLeft="@+id/imageSheep"
         android:layout_alignStart="@+id/imageSheep" />
 
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/chickenicon"
+        android:scaleType="fitXY"
+        android:background="#0000"
+        android:id="@+id/imagePuppy"
+        android:layout_above="@+id/endButton"
+        android:layout_alignLeft="@+id/imageMouse"
+        android:layout_alignStart="@+id/imageMouse" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/gr"
+        android:scaleType="fitXY"
+        android:background="#0000"
+        android:id="@+id/menuButton2"
+        android:layout_above="@+id/imagePuppy"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/mouseicon"
+            android:scaleType="fitXY"
+            android:background="#0000"
+            android:id="@+id/imageMouse"
+            android:layout_marginLeft="33dp"
+            android:layout_marginStart="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/menuButton2" />
+
+        <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/squirrelicon"
+        android:scaleType="fitXY"
+        android:background="#0000"
+        android:id="@+id/imageSheep"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@+id/imagePuppyS"
+        android:layout_toEndOf="@+id/imagePuppyS"
+        android:layout_alignTop="@+id/menuButton2"
+        android:layout_above="@+id/imagePuppy" />
+
+        <ImageView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/s"
+        android:scaleType="fitXY"
+        android:background="#0000"
+        android:id="@+id/imagePuppyS"
+        android:layout_marginBottom="18dp"
+        android:layout_above="@+id/menuButton3"
+        android:layout_alignLeft="@+id/imagePuppy"
+        android:layout_alignStart="@+id/imagePuppy" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/gr"
+        android:scaleType="fitXY"
+        android:background="#0000"
+        android:id="@+id/menuButton1"
+        android:layout_below="@+id/imagePuppy"
+        android:layout_toRightOf="@+id/linearLayout"
+        android:layout_toEndOf="@+id/linearLayout" />
 
 </RelativeLayout>

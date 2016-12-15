@@ -1,0 +1,191 @@
+package com.example.amina.mobpapp;
+
+import android.content.Context;
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+
+
+
+public class GameSound extends AppCompatActivity {
+    MediaPlayer cowSound;
+    MediaPlayer cardinalSound;
+    MediaPlayer dolphinSound;
+    MediaPlayer parrotSound;
+    MediaPlayer dachshundSound;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        final ImageButton[] wrongButtons = new ImageButton[15];
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.game1_layout);
+        wrongButtons[0]=(ImageButton) findViewById(R.id.horseButton7);
+        wrongButtons[1]=(ImageButton) findViewById(R.id.birdButton7);
+        wrongButtons[2]=(ImageButton) findViewById(R.id.frogButton7);
+
+        for (int i=0; i<3;i++) {
+
+            wrongButtons[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(GameSound.this, popupClass.class));
+
+                }
+            });
+        }
+
+        cowSound = MediaPlayer.create(this, R.raw.cow);
+        cowSound.start();
+        cowSound.setLooping(true);
+
+        final ImageButton true1= (ImageButton) findViewById(R.id.cowButton7);
+        true1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                setContentView(R.layout.sound_layout2);
+                cowSound.stop();
+                cardinalSound = MediaPlayer.create(GameSound.this, R.raw.cardinal);
+                cardinalSound.start();
+                cardinalSound.setLooping(true);
+                wrongButtons[3]=(ImageButton) findViewById(R.id.sound2incorrect1);
+                wrongButtons[4]=(ImageButton) findViewById(R.id.sound2incorrect2);
+                wrongButtons[5]=(ImageButton) findViewById(R.id.sound2incorrect3);
+                for (int i=3; i<6;i++)
+                {
+                    wrongButtons[i].setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v) {
+
+                            initiatePopupWindow();
+                        }
+                    });
+                }
+                final ImageButton true2 = (ImageButton) findViewById(R.id.sound2correct);
+                true2.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        cardinalSound.stop();
+                        setContentView(R.layout.sound_layout3);
+                        dolphinSound = MediaPlayer.create(GameSound.this, R.raw.dolphins);
+                        dolphinSound.start();
+                        dolphinSound.setLooping(true);
+                        wrongButtons[6]=(ImageButton) findViewById(R.id.sound3incorrect1);
+                        wrongButtons[7]=(ImageButton) findViewById(R.id.sound3incorrect2);
+                        wrongButtons[8]=(ImageButton) findViewById(R.id.sound3incorrect3);
+                        for (int i=6; i<9;i++)
+                        {
+                            wrongButtons[i].setOnClickListener(new View.OnClickListener(){
+                                @Override
+                                public void onClick(View v) {
+
+                                    initiatePopupWindow();
+                                }
+                            });
+                        }
+                        final ImageButton true3 = (ImageButton) findViewById(R.id.sound3correct);
+                        true3.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                dolphinSound.stop();
+                                setContentView(R.layout.sound_layout4);
+                                parrotSound = MediaPlayer.create(GameSound.this, R.raw.parrot);
+                                parrotSound.start();
+                                parrotSound.setLooping(true);
+                                wrongButtons[9]=(ImageButton) findViewById(R.id.sound4incorrect1);
+                                wrongButtons[10]=(ImageButton) findViewById(R.id.sound4incorrect2);
+                                wrongButtons[11]=(ImageButton) findViewById(R.id.sound4incorrect3);
+                                for (int i=9; i<12;i++)
+                                {
+                                    wrongButtons[i].setOnClickListener(new View.OnClickListener(){
+                                        @Override
+                                        public void onClick(View v) {
+
+                                            initiatePopupWindow();
+                                        }
+                                    });
+                                }
+                                final ImageButton true4 = (ImageButton) findViewById(R.id.sound4correct);
+                                true4.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        parrotSound.stop();
+                                        setContentView(R.layout.sound_layout5);
+                                        dachshundSound = MediaPlayer.create(GameSound.this, R.raw.dachshundb);
+                                        dachshundSound.start();
+                                        dachshundSound.setLooping(true);
+                                        wrongButtons[12]=(ImageButton) findViewById(R.id.sound5incorrect1);
+                                        wrongButtons[13]=(ImageButton) findViewById(R.id.sound5incorrect2);
+                                        wrongButtons[14]=(ImageButton) findViewById(R.id.sound5incorrect3);
+
+                                        for (int i=12; i<15;i++)
+                                        {
+                                            wrongButtons[i].setOnClickListener(new View.OnClickListener(){
+                                                @Override
+                                                public void onClick(View v) {
+
+                                                    initiatePopupWindow();
+                                                }
+                                            });
+                                        }
+                                        final ImageButton true5 = (ImageButton) findViewById(R.id.sound5correct);
+
+                                        true5.setOnClickListener(new View.OnClickListener(){
+                                            @Override
+                                            public void onClick(View v) {
+                                                dachshundSound.stop();
+                                                Intent menu= new Intent(GameSound.this, MainActivity.class );
+
+
+                                                startActivity(menu);
+
+                                            }
+                                        });
+
+
+
+
+                                    }
+                                });//true4
+
+
+                            }
+                    });//true3
+                    }
+                });//true2
+            }
+        });//true1
+
+
+
+    }
+
+    private PopupWindow pwindo;
+
+    private void initiatePopupWindow() {
+        startActivity(new Intent(GameSound.this, popupClass.class));
+    }
+
+    private View.OnClickListener cancel_button_click_listener = new View.OnClickListener() {
+        public void onClick(View v) {
+            pwindo.dismiss();
+
+        }
+    };
+
+
+}
+
+
+

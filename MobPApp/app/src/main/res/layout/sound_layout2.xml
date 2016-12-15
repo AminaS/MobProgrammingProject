@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/soundgame"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="162dp"
+            android:layout_height="224dp"
+            android:scaleType="fitXY"
+            android:background="#0000"
+            app:srcCompat="@drawable/cardinalicon"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/sound2correct" />
+
+        <ImageButton
+            android:layout_width="170dp"
+            android:layout_height="234dp"
+            android:scaleType="fitXY"
+            android:background="#0000"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            app:srcCompat="@drawable/squidicon"
+            android:id="@+id/sound2incorrect2" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="172dp"
+            android:layout_height="204dp"
+            android:scaleType="fitXY"
+            android:background="#0000"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="15dp"
+            app:srcCompat="@drawable/lobstericon"
+            android:id="@+id/sound2incorrect3" />
+
+        <ImageButton
+            android:layout_width="152dp"
+            android:layout_height="214dp"
+            android:scaleType="fitXY"
+            android:background="#0000"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/frogicon"
+            android:id="@+id/sound2incorrect1" />
+    </LinearLayout>
+</LinearLayout>

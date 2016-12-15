@@ -9,25 +9,25 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-    <ImageButton
-        android:layout_width="182dp"
-        android:layout_height="234dp"
-        android:scaleType="fitXY"
-        android:background="#0000"
-        app:srcCompat="@drawable/horseicon"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:id="@+id/horseButton7" />
-
         <ImageButton
-            android:layout_width="170dp"
-            android:layout_height="244dp"
+            android:layout_width="162dp"
+            android:layout_height="234dp"
             android:scaleType="fitXY"
             android:background="#0000"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="5dp"
-            app:srcCompat="@drawable/birdicon"
-            android:id="@+id/birdButton7" />
+            app:srcCompat="@drawable/cowicon"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/sound3incorrect1" />
+
+        <ImageButton
+            android:layout_width="190dp"
+            android:layout_height="224dp"
+            android:scaleType="fitXY"
+            android:background="#0000"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            app:srcCompat="@drawable/lobstericon"
+            android:id="@+id/sound3incorrect2" />
 
 
     </LinearLayout>
@@ -43,17 +43,17 @@
             android:background="#0000"
             android:layout_marginTop="60dp"
             android:layout_marginLeft="15dp"
-            app:srcCompat="@drawable/frogicon"
-            android:id="@+id/frogButton7" />
+            app:srcCompat="@drawable/birdicon"
+            android:id="@+id/sound3incorrect3" />
 
         <ImageButton
-        android:layout_width="182dp"
-        android:layout_height="244dp"
-        android:scaleType="fitXY"
-        android:background="#0000"
-            android:layout_marginTop="40dp"
+            android:layout_width="172dp"
+            android:layout_height="224dp"
+            android:scaleType="fitXY"
+            android:background="#0000"
+            android:layout_marginTop="60dp"
             android:layout_marginLeft="20dp"
-        app:srcCompat="@drawable/cowicon"
-        android:id="@+id/cowButton7" />
+            app:srcCompat="@drawable/dolphinicon"
+            android:id="@+id/sound3correct" />
     </LinearLayout>
 </LinearLayout>
