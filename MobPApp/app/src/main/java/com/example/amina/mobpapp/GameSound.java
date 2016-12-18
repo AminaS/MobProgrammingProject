@@ -22,6 +22,19 @@ public class GameSound extends AppCompatActivity {
     MediaPlayer parrotSound;
     MediaPlayer dachshundSound;
 
+    public void onBackPressed() {
+        Intent menu= new Intent(GameSound.this, MainActivity.class );
+
+        cowSound.stop();
+        cardinalSound.stop();
+        dolphinSound.stop();
+        //parrotSound.stop();
+        //dachshundSound.stop();
+        startActivity(menu);
+
+        super.onBackPressed();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
