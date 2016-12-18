@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        HomeScreen home = new HomeScreen();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_layout);
 
