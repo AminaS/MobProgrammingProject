@@ -21,6 +21,7 @@ public class HomeScreen extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_layout);
+        final ImageButton parent = (ImageButton) findViewById(R.id.parentButton);
         homeSong = MediaPlayer.create(this, R.raw.oldmacdonald);
         homeSong.setVolume(1f, 1f);
         homeSong.start();
@@ -34,6 +35,18 @@ public class HomeScreen extends AppCompatActivity {
 
                 homeSong.setVolume(0.5f, 0.5f);
                 startActivity(menu);
+            }
+        });
+
+
+        parent.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent menu4= new Intent(HomeScreen.this, code.class );
+
+                startActivity(menu4);
+
             }
         });
 
