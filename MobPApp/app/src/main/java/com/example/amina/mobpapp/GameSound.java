@@ -21,6 +21,7 @@ public class GameSound extends AppCompatActivity {
     MediaPlayer dolphinSound;
     MediaPlayer parrotSound;
     MediaPlayer dachshundSound;
+    public static int soundCorrect=0;
 
     public void onBackPressed() {
         Intent menu= new Intent(GameSound.this, MainActivity.class );
@@ -65,7 +66,7 @@ public class GameSound extends AppCompatActivity {
         true1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                soundCorrect++;
 
                 setContentView(R.layout.sound_layout2);
                 cowSound.stop();
@@ -89,6 +90,7 @@ public class GameSound extends AppCompatActivity {
                 true2.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
+                        soundCorrect++;
                         cardinalSound.stop();
                         setContentView(R.layout.sound_layout3);
                         dolphinSound = MediaPlayer.create(GameSound.this, R.raw.dolphins);
@@ -111,6 +113,7 @@ public class GameSound extends AppCompatActivity {
                         true3.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                soundCorrect++;
                                 dolphinSound.stop();
                                 setContentView(R.layout.sound_layout4);
                                 parrotSound = MediaPlayer.create(GameSound.this, R.raw.parrot);
@@ -133,6 +136,7 @@ public class GameSound extends AppCompatActivity {
                                 true4.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
+                                        soundCorrect++;
                                         parrotSound.stop();
                                         setContentView(R.layout.sound_layout5);
                                         dachshundSound = MediaPlayer.create(GameSound.this, R.raw.dachshundb);
@@ -157,6 +161,7 @@ public class GameSound extends AppCompatActivity {
                                         true5.setOnClickListener(new View.OnClickListener(){
                                             @Override
                                             public void onClick(View v) {
+                                                soundCorrect++;
                                                 dachshundSound.stop();
                                                 Intent menu= new Intent(GameSound.this, MainActivity.class );
 

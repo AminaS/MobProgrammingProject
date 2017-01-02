@@ -49,7 +49,7 @@ public class code extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent1= new Intent(code.this, Results.class);
+                Intent intent1= new Intent(code.this, gameResults.class);
                 Intent intent2= new Intent(code.this, HomeScreen.class);
 
                 String u = code.getText().toString();

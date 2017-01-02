@@ -1,6 +1,9 @@
 package com.example.amina.mobpapp;
 
+import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +12,7 @@ import android.widget.ImageButton;
 import android.widget.PopupWindow;
 
 public class foodGame extends AppCompatActivity {
-
+    public  static int foodCorrect=0;
 
     public void onBackPressed() {
         Intent menu= new Intent(foodGame.this, MainActivity.class );
@@ -19,8 +22,11 @@ public class foodGame extends AppCompatActivity {
         super.onBackPressed();
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
 
         final ImageButton[] wrongButtons = new ImageButton[10];
         super.onCreate(savedInstanceState);
@@ -39,13 +45,14 @@ public class foodGame extends AppCompatActivity {
             });
         }
 
+
         final ImageButton true1= (ImageButton) findViewById(R.id.food1correct);
 
 
         true1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                foodCorrect++;
 
                 setContentView(R.layout.food_layout2);
                 wrongButtons[2]=(ImageButton) findViewById(R.id.imageButton9);
@@ -62,9 +69,11 @@ public class foodGame extends AppCompatActivity {
                     });
                 }
                 final ImageButton true2 = (ImageButton) findViewById(R.id.food2correct);
+
                 true2.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
+                        foodCorrect++;
                         setContentView(R.layout.food_layout3);
                         wrongButtons[4]=(ImageButton) findViewById(R.id.imageButton9);
                         wrongButtons[5]=(ImageButton) findViewById(R.id.button);
@@ -80,10 +89,11 @@ public class foodGame extends AppCompatActivity {
                             });
                         }
                         final ImageButton true3 = (ImageButton) findViewById(R.id.food3correct);
+
                         true3.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-
+                                foodCorrect++;
                                 setContentView(R.layout.food_layout4);
                                 wrongButtons[6]=(ImageButton) findViewById(R.id.imageButton9);
                                 wrongButtons[7]=(ImageButton) findViewById(R.id.button);
@@ -98,11 +108,12 @@ public class foodGame extends AppCompatActivity {
                                     });
                                 }
                                 final ImageButton true4 = (ImageButton) findViewById(R.id.food4correct);
+
                                 true4.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         setContentView(R.layout.food_layout5);
-
+                                        foodCorrect++;
                                         wrongButtons[8]=(ImageButton) findViewById(R.id.imageButton9);
                                         wrongButtons[9]=(ImageButton) findViewById(R.id.apple);
 
@@ -117,13 +128,22 @@ public class foodGame extends AppCompatActivity {
                                             });
                                         }
                                         final ImageButton true5 = (ImageButton) findViewById(R.id.food5correct);
-
                                         true5.setOnClickListener(new View.OnClickListener(){
                                             @Override
                                             public void onClick(View v) {
+                                                foodCorrect++;
+                                                String amina;
+                                                if(foodCorrect==0){amina="zero";}
+                                                else if(foodCorrect==1){amina="one";}
+                                                else if(foodCorrect==2){amina="two";}
+                                                else if(foodCorrect==3){amina="tree";}
+                                                else amina="drugi broj";
+                                                SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
+                                                SharedPreferences.Editor editor=sharedPreferences.edit();
+                                                editor.putString("name", amina);
+                                                editor.commit();
+
                                                 Intent menu= new Intent(foodGame.this, MainActivity.class );
-
-
                                                 startActivity(menu);
 
                                             }
@@ -159,6 +179,7 @@ public class foodGame extends AppCompatActivity {
 
         }
     };
+
 
 
 }

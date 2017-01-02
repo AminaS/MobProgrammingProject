@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import android.widget.PopupWindow;
 
 public class GameShadow extends AppCompatActivity {
-
+    public static int shadowCorrect=0;
 
     public void onBackPressed() {
         Intent menu= new Intent(GameShadow.this, MainActivity.class );
@@ -45,7 +45,7 @@ public class GameShadow extends AppCompatActivity {
         true1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                shadowCorrect++;
 
                 setContentView(R.layout.shadow_layout2);
                 wrongButtons[2]=(ImageButton) findViewById(R.id.imageButton9);
@@ -65,6 +65,7 @@ public class GameShadow extends AppCompatActivity {
                 true2.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
+                        shadowCorrect++;
                         setContentView(R.layout.shadow_layout3);
                         wrongButtons[4]=(ImageButton) findViewById(R.id.shadow1correct);
                         wrongButtons[5]=(ImageButton) findViewById(R.id.shadow2correct);
@@ -83,6 +84,7 @@ public class GameShadow extends AppCompatActivity {
                         true3.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                shadowCorrect++;
 
                                 setContentView(R.layout.shadow_layout4);
                                 wrongButtons[6]=(ImageButton) findViewById(R.id.imageButton9);
@@ -101,6 +103,7 @@ public class GameShadow extends AppCompatActivity {
                                 true4.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
+                                        shadowCorrect++;
                                         setContentView(R.layout.shadow_layout5);
 
                                         wrongButtons[8]=(ImageButton) findViewById(R.id.imageButton9);
@@ -121,6 +124,7 @@ public class GameShadow extends AppCompatActivity {
                                         true5.setOnClickListener(new View.OnClickListener(){
                                             @Override
                                             public void onClick(View v) {
+                                                shadowCorrect++;
                                                 Intent menu= new Intent(GameShadow.this, MainActivity.class );
 
 
