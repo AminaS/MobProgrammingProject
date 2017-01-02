@@ -1,5 +1,6 @@
 package com.example.amina.mobpapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.UUID;
 
 
@@ -50,15 +53,24 @@ public class code extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1= new Intent(code.this, gameResults.class);
-                Intent intent2= new Intent(code.this, HomeScreen.class);
+                Context context = getApplicationContext();
 
                 String u = code.getText().toString();
                 String p = input.getText().toString();
                 if(u.equals( p ))
+                {
+                    Toast t= Toast.makeText(context, "Correct code!", Toast.LENGTH_SHORT);
+                    t.show();
                     startActivity(intent1);
+                }
 
                 else
-                    startActivity(intent2);
+                {
+                    Toast t= Toast.makeText(context, "Incorrect code!", Toast.LENGTH_SHORT);
+                    t.show();
+                    finish();
+                }
+
             }
         });
 

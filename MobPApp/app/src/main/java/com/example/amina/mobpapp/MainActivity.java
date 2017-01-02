@@ -56,12 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent menu4= new Intent(MainActivity.this, code.class );
 
-                startActivity(menu4);
-                // TODO Auto-generated method stub
                 //finish();
-                //System.exit(0);
+
             }
         });
 

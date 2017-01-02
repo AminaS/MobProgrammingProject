@@ -1,11 +1,15 @@
 package com.example.amina.mobpapp;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.NotificationCompat;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -175,7 +179,30 @@ public class GameSound extends AppCompatActivity {
                                                 if(soundCorrect==2){amina="2/5";}
                                                 if(soundCorrect==3){amina="3/5";}
                                                 if(soundCorrect==4){amina="4/5";}
-                                                if(soundCorrect==5){amina="5/5";}
+                                                if(soundCorrect==5){amina="5/5";
+
+                                                    Context ctx = getApplicationContext();
+                                                    Intent intent = new Intent(ctx, foodGame.class);
+                                                    PendingIntent contentIntent = PendingIntent.getActivity(ctx, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                                                    NotificationCompat.Builder b = new NotificationCompat.Builder(ctx);
+
+                                                    b.setAutoCancel(true)
+                                                            .setDefaults(Notification.DEFAULT_ALL)
+                                                            .setWhen(System.currentTimeMillis())
+                                                            .setSmallIcon(R.drawable.kliklogo)
+                                                            .setTicker("Hearty365")
+                                                            .setContentTitle("Klik Entertainment")
+
+                                                            .setContentText("Your kid did 5/5 in sound game!")
+                                                            .setDefaults(Notification.DEFAULT_LIGHTS| Notification.DEFAULT_SOUND)
+                                                            .setContentIntent(contentIntent);
+
+
+                                                    NotificationManager notificationManager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
+                                                    notificationManager.notify(1, b.build());
+
+                                                }
 
                                                 SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
                                                 SharedPreferences.Editor editor=sharedPreferences.edit();
