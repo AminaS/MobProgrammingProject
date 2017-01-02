@@ -13,7 +13,7 @@ import android.widget.PopupWindow;
 
 public class foodGame extends AppCompatActivity {
     public  static int foodCorrect=0;
-
+    String amina="";
     public void onBackPressed() {
         Intent menu= new Intent(foodGame.this, MainActivity.class );
 
@@ -31,6 +31,11 @@ public class foodGame extends AppCompatActivity {
         final ImageButton[] wrongButtons = new ImageButton[10];
         super.onCreate(savedInstanceState);
         setContentView(R.layout.food_layout1);
+        amina="0/5";
+        SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString("name", amina);
+        editor.commit();
         wrongButtons[0]=(ImageButton) findViewById(R.id.imageButton9);
         wrongButtons[1]=(ImageButton) findViewById(R.id.imageButton11);
 
@@ -132,12 +137,14 @@ public class foodGame extends AppCompatActivity {
                                             @Override
                                             public void onClick(View v) {
                                                 foodCorrect++;
-                                                String amina;
-                                                if(foodCorrect==0){amina="zero";}
-                                                else if(foodCorrect==1){amina="one";}
-                                                else if(foodCorrect==2){amina="two";}
-                                                else if(foodCorrect==3){amina="tree";}
-                                                else amina="drugi broj";
+
+                                                if(foodCorrect==0){amina="0/5";}
+                                                if(foodCorrect==1){amina="1/5";}
+                                                if(foodCorrect==2){amina="2/5";}
+                                                if(foodCorrect==3){amina="3/5";}
+                                                if(foodCorrect==4){amina="4/5";}
+                                                if(foodCorrect==5){amina="5/5";}
+
                                                 SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
                                                 SharedPreferences.Editor editor=sharedPreferences.edit();
                                                 editor.putString("name", amina);

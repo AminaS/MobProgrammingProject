@@ -1,6 +1,8 @@
 package com.example.amina.mobpapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.widget.PopupWindow;
 
 public class GameShadow extends AppCompatActivity {
     public static int shadowCorrect=0;
+    String amina="";
 
     public void onBackPressed() {
         Intent menu= new Intent(GameShadow.this, MainActivity.class );
@@ -25,6 +28,11 @@ public class GameShadow extends AppCompatActivity {
         final ImageButton[] wrongButtons = new ImageButton[10];
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shadow_layout1);
+        amina="0/5";
+        SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString("shadow", amina);
+        editor.commit();
         wrongButtons[0]=(ImageButton) findViewById(R.id.imageButton9);
         wrongButtons[1]=(ImageButton) findViewById(R.id.shadow2correct);
 
@@ -125,6 +133,17 @@ public class GameShadow extends AppCompatActivity {
                                             @Override
                                             public void onClick(View v) {
                                                 shadowCorrect++;
+                                                if(shadowCorrect==0){amina="0/5";}
+                                                if(shadowCorrect==1){amina="1/5";}
+                                                if(shadowCorrect==2){amina="2/5";}
+                                                if(shadowCorrect==3){amina="3/5";}
+                                                if(shadowCorrect==4){amina="4/5";}
+                                                if(shadowCorrect==5){amina="5/5";}
+
+                                                SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
+                                                SharedPreferences.Editor editor=sharedPreferences.edit();
+                                                editor.putString("shadow", amina);
+                                                editor.commit();
                                                 Intent menu= new Intent(GameShadow.this, MainActivity.class );
 
 

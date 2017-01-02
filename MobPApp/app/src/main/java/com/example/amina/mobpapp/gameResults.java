@@ -20,21 +20,15 @@ public class gameResults extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.parentfirst);
 
-TextView t= (TextView) findViewById(R.id.proba);
-
-
-
         ImageButton foodButton =(ImageButton) findViewById(R.id.imageButton);
-        final TextView food = (TextView) findViewById(R.id.foodresult);
 
         ImageButton shadowButton =(ImageButton) findViewById(R.id.imageButton1);
-        final TextView shadow = (TextView) findViewById(R.id.shadowresult);
-
-
 
         ImageButton soundButton =(ImageButton) findViewById(R.id.imageButton2);
-        final TextView sound = (TextView) findViewById(R.id.soundresult);
+
         final TextView ft = (TextView) findViewById(R.id.ftext);
+        final TextView st = (TextView) findViewById(R.id.shadowText);
+        final TextView sst = (TextView) findViewById(R.id.soundText);
 
         foodButton.setOnClickListener(new View.OnClickListener() {
 
@@ -42,7 +36,7 @@ TextView t= (TextView) findViewById(R.id.proba);
             public void onClick(View v) {
 
                 SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
-                String fC= sharedPreferences.getString("name", "Default");
+                String fC= sharedPreferences.getString("name", "0/5");
                 ft.setText(fC);
                 /*SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
                 int fC= sharedPreferences.getInt("food",0);
@@ -56,8 +50,10 @@ TextView t= (TextView) findViewById(R.id.proba);
             @Override
             public void onClick(View v) {
 
-                sound.setVisibility(View.VISIBLE);
-
+               // sound.setVisibility(View.VISIBLE);
+                SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
+                String fC= sharedPreferences.getString("sound", "0/5");
+                sst.setText(fC);
 
             }
         });
@@ -67,7 +63,10 @@ TextView t= (TextView) findViewById(R.id.proba);
             @Override
             public void onClick(View v) {
 
-                shadow.setVisibility(View.VISIBLE);
+                //shadow.setVisibility(View.VISIBLE);
+                SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
+                String fC= sharedPreferences.getString("shadow", "0/5");
+                st.setText(fC);
 
 
             }

@@ -2,6 +2,7 @@ package com.example.amina.mobpapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ public class GameSound extends AppCompatActivity {
     MediaPlayer parrotSound;
     MediaPlayer dachshundSound;
     public static int soundCorrect=0;
+    String amina="";
 
     public void onBackPressed() {
         Intent menu= new Intent(GameSound.this, MainActivity.class );
@@ -43,6 +45,11 @@ public class GameSound extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game1_layout);
+        amina="0/5";
+        SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString("sound", amina);
+        editor.commit();
         wrongButtons[0]=(ImageButton) findViewById(R.id.horseButton7);
         wrongButtons[1]=(ImageButton) findViewById(R.id.birdButton7);
         wrongButtons[2]=(ImageButton) findViewById(R.id.frogButton7);
@@ -162,6 +169,17 @@ public class GameSound extends AppCompatActivity {
                                             @Override
                                             public void onClick(View v) {
                                                 soundCorrect++;
+                                                if(soundCorrect==0){amina="0/5";}
+                                                if(soundCorrect==1){amina="1/5";}
+                                                if(soundCorrect==2){amina="2/5";}
+                                                if(soundCorrect==3){amina="3/5";}
+                                                if(soundCorrect==4){amina="4/5";}
+                                                if(soundCorrect==5){amina="5/5";}
+
+                                                SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
+                                                SharedPreferences.Editor editor=sharedPreferences.edit();
+                                                editor.putString("sound", amina);
+                                                editor.commit();
                                                 dachshundSound.stop();
                                                 Intent menu= new Intent(GameSound.this, MainActivity.class );
 
