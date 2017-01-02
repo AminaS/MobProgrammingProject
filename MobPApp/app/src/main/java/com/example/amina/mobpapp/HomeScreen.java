@@ -1,8 +1,6 @@
 package com.example.amina.mobpapp;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,8 +31,6 @@ public class HomeScreen extends AppCompatActivity {
         playbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 Intent menu= new Intent(HomeScreen.this, MainActivity.class );
 
                 homeSong.setVolume(0.5f, 0.5f);

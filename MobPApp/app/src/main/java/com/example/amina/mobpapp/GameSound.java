@@ -59,6 +59,7 @@ public class GameSound extends AppCompatActivity {
             wrongButtons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    soundCorrect--;
                     startActivity(new Intent(GameSound.this, popupClass.class));
 
                 }
@@ -88,7 +89,7 @@ public class GameSound extends AppCompatActivity {
                     wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
-
+                            soundCorrect--;
                             initiatePopupWindow();
                         }
                     });
@@ -111,7 +112,7 @@ public class GameSound extends AppCompatActivity {
                             wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                 @Override
                                 public void onClick(View v) {
-
+                                    soundCorrect--;
                                     initiatePopupWindow();
                                 }
                             });
@@ -134,7 +135,7 @@ public class GameSound extends AppCompatActivity {
                                     wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                         @Override
                                         public void onClick(View v) {
-
+                                            soundCorrect--;
                                             initiatePopupWindow();
                                         }
                                     });
@@ -158,7 +159,7 @@ public class GameSound extends AppCompatActivity {
                                             wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                                 @Override
                                                 public void onClick(View v) {
-
+                                                    soundCorrect--;
                                                     initiatePopupWindow();
                                                 }
                                             });

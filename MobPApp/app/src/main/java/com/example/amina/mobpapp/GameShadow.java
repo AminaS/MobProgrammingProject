@@ -41,6 +41,7 @@ public class GameShadow extends AppCompatActivity {
             wrongButtons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    shadowCorrect--;
                     startActivity(new Intent(GameShadow.this, popupClass.class));
 
                 }
@@ -64,7 +65,7 @@ public class GameShadow extends AppCompatActivity {
                     wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
-
+                            shadowCorrect--;
                             initiatePopupWindow();
                         }
                     });
@@ -83,7 +84,7 @@ public class GameShadow extends AppCompatActivity {
                             wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                 @Override
                                 public void onClick(View v) {
-
+                                    shadowCorrect--;
                                     initiatePopupWindow();
                                 }
                             });
@@ -102,7 +103,7 @@ public class GameShadow extends AppCompatActivity {
                                     wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                         @Override
                                         public void onClick(View v) {
-
+                                            shadowCorrect--;
                                             initiatePopupWindow();
                                         }
                                     });
@@ -122,7 +123,7 @@ public class GameShadow extends AppCompatActivity {
                                             wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                                 @Override
                                                 public void onClick(View v) {
-
+                                                    shadowCorrect--;
                                                     initiatePopupWindow();
                                                 }
                                             });
