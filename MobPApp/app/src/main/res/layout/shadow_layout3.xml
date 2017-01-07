@@ -13,12 +13,12 @@
 
         <ImageButton
             android:layout_width="191dp"
-            android:layout_height="240dp"
+            android:layout_height="275dp"
             app:srcCompat="@drawable/crabicon"
             android:id="@+id/imageButton7"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:scaleType="fitXY"
-            android:background="#0000"/>
+            android:background="@drawable/question"/>
 
         <ImageButton
             android:layout_width="400dp"
