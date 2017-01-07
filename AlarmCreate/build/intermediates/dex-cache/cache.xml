@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Amina\MobProgrammingProject\AlarmCreate\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="84515986a21254dd3cb33b6498ed6d6d4f365e22">
+        <dex dex="C:\Users\Amina\MobProgrammingProject\AlarmCreate\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_5c7c5f06dd29d5006c712afcf3a86ce4f6fc4501\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Amina\MobProgrammingProject\AlarmCreate\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d3d48da4895bf0b7d4a014c28b9e796863132639">
+        <dex dex="C:\Users\Amina\MobProgrammingProject\AlarmCreate\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_c359f24649c1c326497d228938583bf6d90152aa\classes.dex" />
+    </item>
+
+</items>

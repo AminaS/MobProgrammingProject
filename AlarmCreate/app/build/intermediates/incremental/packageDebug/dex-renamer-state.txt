@@ -1,0 +1,7 @@
+#Tue Jan 03 13:28:43 CET 2017
+base.0=C\:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5c7c5f06dd29d5006c712afcf3a86ce4f6fc4501
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_c359f24649c1c326497d228938583bf6d90152aa\\classes.dex
+base.1=C\:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_c359f24649c1c326497d228938583bf6d90152aa
+file.0=C\:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5c7c5f06dd29d5006c712afcf3a86ce4f6fc4501\\classes.dex

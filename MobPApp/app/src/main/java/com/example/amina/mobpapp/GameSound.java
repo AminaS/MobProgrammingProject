@@ -6,7 +6,9 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
@@ -27,6 +29,7 @@ public class GameSound extends AppCompatActivity {
     MediaPlayer parrotSound;
     MediaPlayer dachshundSound;
     public static int soundCorrect=0;
+
     String amina="";
 
     public void onBackPressed() {
@@ -71,6 +74,7 @@ public class GameSound extends AppCompatActivity {
         }
 
         cowSound = MediaPlayer.create(this, R.raw.cow);
+
         cowSound.start();
         cowSound.setLooping(true);
 

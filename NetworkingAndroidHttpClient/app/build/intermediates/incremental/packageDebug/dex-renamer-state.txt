@@ -1,0 +1,7 @@
+#Tue Jan 03 13:49:20 CET 2017
+base.0=C\:\\Users\\Amina\\MobProgrammingProject\\NetworkingAndroidHttpClient\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_8a50c738bc4ed0d1887b8913f64c68da05eb3289
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Amina\\MobProgrammingProject\\NetworkingAndroidHttpClient\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_e43dd50823efb0e9d839b0fe615f7efbd95104a5\\classes.dex
+base.1=C\:\\Users\\Amina\\MobProgrammingProject\\NetworkingAndroidHttpClient\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_e43dd50823efb0e9d839b0fe615f7efbd95104a5
+file.0=C\:\\Users\\Amina\\MobProgrammingProject\\NetworkingAndroidHttpClient\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_8a50c738bc4ed0d1887b8913f64c68da05eb3289\\classes.dex

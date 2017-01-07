@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Amina\MobProgrammingProject\NetworkingAndroidHttpClient\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c4c370010d4e294e009a12bda791d42ca3f81a89">
+        <dex dex="C:\Users\Amina\MobProgrammingProject\NetworkingAndroidHttpClient\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e43dd50823efb0e9d839b0fe615f7efbd95104a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Amina\MobProgrammingProject\NetworkingAndroidHttpClient\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4476760878c803fe43ce5f5a6cf98d5406cb6cf9">
+        <dex dex="C:\Users\Amina\MobProgrammingProject\NetworkingAndroidHttpClient\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8a50c738bc4ed0d1887b8913f64c68da05eb3289\classes.dex" />
+    </item>
+
+</items>

@@ -33,7 +33,7 @@ public class HomeScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent menu= new Intent(HomeScreen.this, MainActivity.class );
 
-                homeSong.setVolume(0.5f, 0.5f);
+                homeSong.setVolume(0.3f, 0.3f);
                 startActivity(menu);
             }
         });
@@ -61,5 +61,21 @@ public class HomeScreen extends AppCompatActivity {
 
 
     }
+
+   /*int length;
+    public void onPause() {
+        super.onPause();
+        homeSong.pause();
+        length = homeSong.getCurrentPosition();
+
+
+    }
+
+    public void onResume() {
+        super.onResume();
+        homeSong.seekTo(length);
+        homeSong.start();
+
+    }*/
 }
 

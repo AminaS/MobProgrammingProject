@@ -1,0 +1,102 @@
+[
+    {
+        "outputFile": "C:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "C:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 104,
+                    "endColumn": 73,
+                    "endOffset": 173
+                },
+                "from": {
+                    "file": "C:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 234,
+                        "endColumn": 73,
+                        "endOffset": 303
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 178,
+                    "endColumn": 83,
+                    "endOffset": 257
+                },
+                "from": {
+                    "file": "C:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 308,
+                        "endColumn": 83,
+                        "endOffset": 387
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 262,
+                    "endColumn": 67,
+                    "endOffset": 325
+                },
+                "from": {
+                    "file": "C:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 67,
+                        "endOffset": 229
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 330,
+                    "endColumn": 61,
+                    "endOffset": 387
+                },
+                "from": {
+                    "file": "C:\\Users\\Amina\\MobProgrammingProject\\AlarmCreate\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 104,
+                        "endColumn": 61,
+                        "endOffset": 161
+                    }
+                }
+            }
+        ]
+    }
+]

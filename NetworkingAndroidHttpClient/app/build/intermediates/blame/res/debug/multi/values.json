@@ -1,0 +1,45 @@
+[
+    {
+        "outputFile": "C:\\Users\\Amina\\MobProgrammingProject\\NetworkingAndroidHttpClient\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 64,
+                    "endOffset": 115
+                },
+                "from": {
+                    "file": "C:\\Users\\Amina\\MobProgrammingProject\\NetworkingAndroidHttpClient\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 64,
+                        "endOffset": 115
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 120,
+                    "endColumn": 54,
+                    "endOffset": 170
+                },
+                "from": {
+                    "file": "C:\\Users\\Amina\\MobProgrammingProject\\NetworkingAndroidHttpClient\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 1,
+                        "startOffset": 117,
+                        "endColumn": 51,
+                        "endOffset": 167
+                    }
+                }
+            }
+        ]
+    }
+]
