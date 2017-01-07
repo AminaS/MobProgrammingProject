@@ -8,12 +8,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
 public class foodGame extends AppCompatActivity {
     public  static int foodCorrect=0;
@@ -48,7 +53,8 @@ public class foodGame extends AppCompatActivity {
             wrongButtons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(foodGame.this, popupClass.class));
+                    //startActivity(new Intent(foodGame.this, popupClass.class));
+                    initiatePopupWindow();
 
                 }
             });
@@ -72,7 +78,7 @@ public class foodGame extends AppCompatActivity {
                     wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
-
+                            foodCorrect=foodCorrect-2;
                             initiatePopupWindow();
                         }
                     });
@@ -92,7 +98,7 @@ public class foodGame extends AppCompatActivity {
                             wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                 @Override
                                 public void onClick(View v) {
-
+                                    foodCorrect=foodCorrect-2;
                                     initiatePopupWindow();
                                 }
                             });
@@ -111,7 +117,7 @@ public class foodGame extends AppCompatActivity {
                                     wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                         @Override
                                         public void onClick(View v) {
-
+                                            foodCorrect=foodCorrect-2;
                                             initiatePopupWindow();
                                         }
                                     });
@@ -131,7 +137,7 @@ public class foodGame extends AppCompatActivity {
                                             wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                                 @Override
                                                 public void onClick(View v) {
-
+                                                    foodCorrect=foodCorrect-2;
                                                     initiatePopupWindow();
                                                 }
                                             });
@@ -158,7 +164,7 @@ public class foodGame extends AppCompatActivity {
                                                             .setDefaults(Notification.DEFAULT_ALL)
                                                             .setWhen(System.currentTimeMillis())
                                                             .setSmallIcon(R.drawable.kliklogo)
-                                                            .setTicker("Hearty365")
+                                                            .setTicker("Klik Entertainment")
                                                             .setContentTitle("Klik Entertainment")
 
                                                             .setContentText("Your kid did 5/5 in food game!")
@@ -200,6 +206,18 @@ public class foodGame extends AppCompatActivity {
         });//true1
 
 
+    }
+
+    public void onPause() {
+        super.onPause();
+
+
+
+    }
+
+    public void onResume() {
+        super.onResume();
+
 
     }
 
@@ -207,17 +225,28 @@ public class foodGame extends AppCompatActivity {
     private PopupWindow pwindo;
 
     private void initiatePopupWindow() {
-        startActivity(new Intent(foodGame.this, popupClass.class));
-    }
+        final LayoutInflater inflater = getLayoutInflater();
 
-    private View.OnClickListener cancel_button_click_listener = new View.OnClickListener() {
-        public void onClick(View v) {
-            pwindo.dismiss();
+        final View layout = inflater.inflate(R.layout.customtoast,
+                (ViewGroup) findViewById(R.id.custom_toast_layout_id));
+        final Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        //toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+
+        toast.show();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                toast.cancel();
+            }
+        }, 500);
 
         }
     };
 
 
-}
+
 
 

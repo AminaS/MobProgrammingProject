@@ -2,19 +2,33 @@ package com.example.amina.mobpapp;
 import android.content.Intent;
 import android.media.Image;
 import android.media.MediaPlayer;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+
+
         HomeScreen home = new HomeScreen();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_layout);
@@ -57,7 +71,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //finish();
+                Intent menu4= new Intent(MainActivity.this, code.class );
+
+                startActivity(menu4);
+
+
 
             }
         });

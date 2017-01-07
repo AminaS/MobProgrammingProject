@@ -16,7 +16,7 @@
             android:background="#0000"
             app:srcCompat="@drawable/birdicon"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="10dp"
             android:id="@+id/sound4incorrect1" />
 
         <ImageButton
@@ -52,7 +52,7 @@
             android:scaleType="fitXY"
             android:background="#0000"
             android:layout_marginTop="40dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="12dp"
             app:srcCompat="@drawable/turkeyicon"
             android:id="@+id/sound4incorrect3" />
     </LinearLayout>

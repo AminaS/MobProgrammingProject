@@ -67,6 +67,7 @@ public class code extends AppCompatActivity {
                 else
                 {
                     Toast t= Toast.makeText(context, "Incorrect code!", Toast.LENGTH_SHORT);
+
                     t.show();
                     finish();
                 }

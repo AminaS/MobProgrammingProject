@@ -21,25 +21,15 @@ public class HomeScreen extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_layout);
-        final ImageButton parent = (ImageButton) findViewById(R.id.parentButton);
+        final ImageButton parent = (ImageButton) findViewById(R.id.end);
         homeSong = MediaPlayer.create(this, R.raw.oldmacdonald);
         homeSong.setVolume(1f, 1f);
         homeSong.start();
         homeSong.setLooping(true);
         final ImageButton playbutton= (ImageButton) findViewById(R.id.playbutton);
 
-        playbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent menu= new Intent(HomeScreen.this, MainActivity.class );
 
-                homeSong.setVolume(0.3f, 0.3f);
-                startActivity(menu);
-            }
-        });
-
-
-        parent.setOnClickListener(new View.OnClickListener() {
+        /*parent.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -47,8 +37,25 @@ public class HomeScreen extends AppCompatActivity {
 
                 startActivity(menu4);
 
+
+            }
+        });*/
+
+
+        playbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menu= new Intent(HomeScreen.this, MainActivity.class );
+                homeSong.setVolume(0.3f,0.3f);
+                startActivity(menu);
+
+
+
             }
         });
+
+
+
 
         RotateAnimation rotate = new RotateAnimation(0, 360,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
@@ -62,20 +69,20 @@ public class HomeScreen extends AppCompatActivity {
 
     }
 
-   /*int length;
+   int length;
     public void onPause() {
         super.onPause();
-        homeSong.pause();
-        length = homeSong.getCurrentPosition();
+       //homeSong.pause();
+        //length = homeSong.getCurrentPosition();
 
 
     }
 
     public void onResume() {
         super.onResume();
-        homeSong.seekTo(length);
-        homeSong.start();
+        //homeSong.seekTo(length);
+        //homeSong.start();
 
-    }*/
+    }
 }
 

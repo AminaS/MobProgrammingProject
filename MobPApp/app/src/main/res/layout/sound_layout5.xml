@@ -11,12 +11,12 @@
         android:layout_height="wrap_content">
         <ImageButton
             android:layout_width="182dp"
-            android:layout_height="200dp"
+            android:layout_height="190dp"
             android:scaleType="fitXY"
             android:background="#0000"
             app:srcCompat="@drawable/turtleicon"
             android:layout_marginTop="50dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="7dp"
             android:id="@+id/sound5incorrect3" />
 
         <ImageButton

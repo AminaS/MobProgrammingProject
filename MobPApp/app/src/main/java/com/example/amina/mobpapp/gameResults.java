@@ -45,6 +45,9 @@ public class gameResults extends AppCompatActivity {
             }
         });
 
+
+
+
         soundButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -57,6 +60,10 @@ public class gameResults extends AppCompatActivity {
 
             }
         });
+
+
+
+
 
         shadowButton.setOnClickListener(new View.OnClickListener() {
 

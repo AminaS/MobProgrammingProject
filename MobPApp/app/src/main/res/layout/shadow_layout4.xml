@@ -12,22 +12,22 @@
 
 
         <ImageButton
-            android:layout_width="191dp"
+            android:layout_width="181dp"
             android:layout_height="275dp"
             app:srcCompat="@drawable/squidicon"
             android:id="@+id/imageButton7"
             android:layout_marginTop="5dp"
             android:scaleType="fitXY"
-            android:background="@drawable/question"/>
+            android:background="@drawable/qq"/>
 
         <ImageButton
-            android:layout_width="400dp"
-            android:layout_height="250dp"
+            android:layout_width="181dp"
+            android:layout_height="275dp"
             app:srcCompat="@drawable/octopusshadow"
             android:id="@+id/imageButton9"
             android:layout_weight="1"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:scaleType="fitXY"
             android:background="#0000"/>
 
@@ -41,8 +41,8 @@
         android:layout_weight="0.07">
 
         <ImageButton
-            android:layout_width="191dp"
-            android:layout_height="240dp"
+            android:layout_width="181dp"
+            android:layout_height="275dp"
             app:srcCompat="@drawable/squidshadow"
             android:id="@+id/shadow4correct"
             android:layout_weight="1"
@@ -56,7 +56,8 @@
             app:srcCompat="@drawable/jellyfishshadow"
             android:id="@+id/shadow1correct"
             android:scaleType="fitXY"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
             android:background="#0000"/>
     </LinearLayout>
 

@@ -13,12 +13,12 @@
 
 
         <ImageButton
-            android:layout_width="191dp"
-            android:layout_height="280dp"
+            android:layout_width="181dp"
+            android:layout_height="275dp"
             app:srcCompat="@drawable/cardinalicon"
             android:id="@+id/imageButton7"
             android:scaleType="fitXY"
-            android:background="@drawable/question"/>
+            android:background="@drawable/qq"/>
 
         <ImageButton
             android:layout_width="500dp"

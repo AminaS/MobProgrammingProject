@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-
+import android.widget.Toast;
 
 
 public class GameSound extends AppCompatActivity {
@@ -34,12 +34,16 @@ public class GameSound extends AppCompatActivity {
 
     public void onBackPressed() {
         Intent menu= new Intent(GameSound.this, MainActivity.class );
-
+        /*if(cowSound.isPlaying())
         cowSound.stop();
+        if(cardinalSound.isPlaying())
         cardinalSound.stop();
+        if(dolphinSound.isPlaying())
         dolphinSound.stop();
-        //parrotSound.stop();
-        //dachshundSound.stop();
+        if(parrotSound.isPlaying())
+            parrotSound.stop();
+        if(dachshundSound.isPlaying())
+            dachshundSound.stop();*/
         startActivity(menu);
 
         super.onBackPressed();
@@ -47,6 +51,7 @@ public class GameSound extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
 
         final ImageButton[] wrongButtons = new ImageButton[15];
 
@@ -66,8 +71,9 @@ public class GameSound extends AppCompatActivity {
             wrongButtons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    soundCorrect--;
-                    startActivity(new Intent(GameSound.this, popupClass.class));
+                    soundCorrect=soundCorrect-2;
+                    //startActivity(new Intent(GameSound.this, popupClass.class));
+                    initiatePopupWindow();
 
                 }
             });
@@ -97,7 +103,7 @@ public class GameSound extends AppCompatActivity {
                     wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
-                            soundCorrect--;
+                            soundCorrect=soundCorrect-2;
                             initiatePopupWindow();
                         }
                     });
@@ -120,7 +126,7 @@ public class GameSound extends AppCompatActivity {
                             wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                 @Override
                                 public void onClick(View v) {
-                                    soundCorrect--;
+                                    soundCorrect=soundCorrect-2;
                                     initiatePopupWindow();
                                 }
                             });
@@ -143,7 +149,7 @@ public class GameSound extends AppCompatActivity {
                                     wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                         @Override
                                         public void onClick(View v) {
-                                            soundCorrect--;
+                                            soundCorrect=soundCorrect-2;
                                             initiatePopupWindow();
                                         }
                                     });
@@ -167,7 +173,7 @@ public class GameSound extends AppCompatActivity {
                                             wrongButtons[i].setOnClickListener(new View.OnClickListener(){
                                                 @Override
                                                 public void onClick(View v) {
-                                                    soundCorrect--;
+                                                    soundCorrect=soundCorrect-2;
                                                     initiatePopupWindow();
                                                 }
                                             });
@@ -195,7 +201,7 @@ public class GameSound extends AppCompatActivity {
                                                             .setDefaults(Notification.DEFAULT_ALL)
                                                             .setWhen(System.currentTimeMillis())
                                                             .setSmallIcon(R.drawable.kliklogo)
-                                                            .setTicker("Hearty365")
+                                                            .setTicker("Klik Entertainment")
                                                             .setContentTitle("Klik Entertainment")
 
                                                             .setContentText("Your kid did 5/5 in sound game!")
@@ -212,6 +218,7 @@ public class GameSound extends AppCompatActivity {
                                                 SharedPreferences.Editor editor=sharedPreferences.edit();
                                                 editor.putString("sound", amina);
                                                 editor.commit();
+
                                                 dachshundSound.stop();
                                                 Intent menu= new Intent(GameSound.this, MainActivity.class );
 
@@ -242,15 +249,25 @@ public class GameSound extends AppCompatActivity {
     private PopupWindow pwindo;
 
     private void initiatePopupWindow() {
-        startActivity(new Intent(GameSound.this, popupClass.class));
+        final LayoutInflater inflater = getLayoutInflater();
+
+        final View layout = inflater.inflate(R.layout.customtoast,
+                (ViewGroup) findViewById(R.id.custom_toast_layout_id));
+        final Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        //toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+
+        toast.show();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                toast.cancel();
+            }
+        }, 500);
+
     }
-
-    private View.OnClickListener cancel_button_click_listener = new View.OnClickListener() {
-        public void onClick(View v) {
-            pwindo.dismiss();
-
-        }
-    };
 
 
 }

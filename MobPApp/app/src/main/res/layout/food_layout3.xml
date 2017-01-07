@@ -13,12 +13,13 @@
 
 
         <ImageButton
-            android:layout_width="195dp"
-            android:layout_height="285dp"
+            android:layout_width="175dp"
+            android:layout_height="265dp"
             app:srcCompat="@drawable/cowicon"
             android:id="@+id/imageButton7"
             android:scaleType="fitXY"
-            android:background="@drawable/question"/>
+            android:background="@drawable/qq"
+            android:layout_marginTop="10dp"/>
 
         <ImageButton
             android:layout_width="500dp"
