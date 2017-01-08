@@ -15,6 +15,14 @@ import com.example.amina.mobpapp.foodGame;
  */
 
 public class gameResults extends AppCompatActivity {
+    public void onBackPressed() {
+        this.finish();
+        Intent menu= new Intent(gameResults.this, MainActivity.class );
+
+        startActivity(menu);
+
+        super.onBackPressed();
+    }
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);

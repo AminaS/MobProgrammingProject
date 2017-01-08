@@ -23,66 +23,38 @@ import android.widget.Toast;
 
 
 public class GameSound extends AppCompatActivity {
-    MediaPlayer cowSound;
-    MediaPlayer cardinalSound;
-    MediaPlayer dolphinSound;
-    MediaPlayer parrotSound;
-    MediaPlayer dachshundSound;
+    MediaPlayer sound;
     public static int soundCorrect=0;
 
-    String amina="";
+    String mystring="";
 
     public void onBackPressed() {
         Intent menu= new Intent(GameSound.this, MainActivity.class );
-        /*if(cowSound.isPlaying())
-        cowSound.stop();
-        if(cardinalSound.isPlaying())
-        cardinalSound.stop();
-        if(dolphinSound.isPlaying())
-        dolphinSound.stop();
-        if(parrotSound.isPlaying())
-            parrotSound.stop();
-        if(dachshundSound.isPlaying())
-            dachshundSound.stop();*/
         startActivity(menu);
 
         super.onBackPressed();
     }
-
+    final ImageButton[] wrongButtons = new ImageButton[15];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
 
-        final ImageButton[] wrongButtons = new ImageButton[15];
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game1_layout);
-        amina="0/5";
+        mystring="0/5";
         SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor=sharedPreferences.edit();
-        editor.putString("sound", amina);
+        editor.putString("sound", mystring);
         editor.commit();
         wrongButtons[0]=(ImageButton) findViewById(R.id.horseButton7);
         wrongButtons[1]=(ImageButton) findViewById(R.id.birdButton7);
         wrongButtons[2]=(ImageButton) findViewById(R.id.frogButton7);
 
-        for (int i=0; i<3;i++) {
+        incorrect(0,3);
 
-            wrongButtons[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    soundCorrect=soundCorrect-2;
-                    //startActivity(new Intent(GameSound.this, popupClass.class));
-                    initiatePopupWindow();
-
-                }
-            });
-        }
-
-        cowSound = MediaPlayer.create(this, R.raw.cow);
-
-        cowSound.start();
-        cowSound.setLooping(true);
+        sound(R.raw.cow);
 
         final ImageButton true1= (ImageButton) findViewById(R.id.cowButton7);
         true1.setOnClickListener(new View.OnClickListener() {
@@ -91,105 +63,56 @@ public class GameSound extends AppCompatActivity {
                 soundCorrect++;
 
                 setContentView(R.layout.sound_layout2);
-                cowSound.stop();
-                cardinalSound = MediaPlayer.create(GameSound.this, R.raw.cardinal);
-                cardinalSound.start();
-                cardinalSound.setLooping(true);
+                sound.stop();
+                sound(R.raw.cardinal);
                 wrongButtons[3]=(ImageButton) findViewById(R.id.sound2incorrect1);
                 wrongButtons[4]=(ImageButton) findViewById(R.id.sound2incorrect2);
                 wrongButtons[5]=(ImageButton) findViewById(R.id.sound2incorrect3);
-                for (int i=3; i<6;i++)
-                {
-                    wrongButtons[i].setOnClickListener(new View.OnClickListener(){
-                        @Override
-                        public void onClick(View v) {
-                            soundCorrect=soundCorrect-2;
-                            initiatePopupWindow();
-                        }
-                    });
-                }
+                incorrect(3,6);
                 final ImageButton true2 = (ImageButton) findViewById(R.id.sound2correct);
                 true2.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
                         soundCorrect++;
-                        cardinalSound.stop();
+                        sound.stop();
                         setContentView(R.layout.sound_layout3);
-                        dolphinSound = MediaPlayer.create(GameSound.this, R.raw.dolphins);
-                        dolphinSound.start();
-                        dolphinSound.setLooping(true);
+                        sound(R.raw.dolphins);
                         wrongButtons[6]=(ImageButton) findViewById(R.id.sound3incorrect1);
                         wrongButtons[7]=(ImageButton) findViewById(R.id.sound3incorrect2);
                         wrongButtons[8]=(ImageButton) findViewById(R.id.sound3incorrect3);
-                        for (int i=6; i<9;i++)
-                        {
-                            wrongButtons[i].setOnClickListener(new View.OnClickListener(){
-                                @Override
-                                public void onClick(View v) {
-                                    soundCorrect=soundCorrect-2;
-                                    initiatePopupWindow();
-                                }
-                            });
-                        }
+                        incorrect(6,9);
                         final ImageButton true3 = (ImageButton) findViewById(R.id.sound3correct);
                         true3.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 soundCorrect++;
-                                dolphinSound.stop();
+                                sound.stop();
                                 setContentView(R.layout.sound_layout4);
-                                parrotSound = MediaPlayer.create(GameSound.this, R.raw.parrot);
-                                parrotSound.start();
-                                parrotSound.setLooping(true);
+                                sound(R.raw.parrot);
                                 wrongButtons[9]=(ImageButton) findViewById(R.id.sound4incorrect1);
                                 wrongButtons[10]=(ImageButton) findViewById(R.id.sound4incorrect2);
                                 wrongButtons[11]=(ImageButton) findViewById(R.id.sound4incorrect3);
-                                for (int i=9; i<12;i++)
-                                {
-                                    wrongButtons[i].setOnClickListener(new View.OnClickListener(){
-                                        @Override
-                                        public void onClick(View v) {
-                                            soundCorrect=soundCorrect-2;
-                                            initiatePopupWindow();
-                                        }
-                                    });
-                                }
+                                incorrect(9,12);
                                 final ImageButton true4 = (ImageButton) findViewById(R.id.sound4correct);
                                 true4.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         soundCorrect++;
-                                        parrotSound.stop();
+                                        sound.stop();
                                         setContentView(R.layout.sound_layout5);
-                                        dachshundSound = MediaPlayer.create(GameSound.this, R.raw.dachshundb);
-                                        dachshundSound.start();
-                                        dachshundSound.setLooping(true);
+                                        sound(R.raw.dachshundb);
                                         wrongButtons[12]=(ImageButton) findViewById(R.id.sound5incorrect1);
                                         wrongButtons[13]=(ImageButton) findViewById(R.id.sound5incorrect2);
                                         wrongButtons[14]=(ImageButton) findViewById(R.id.sound5incorrect3);
-
-                                        for (int i=12; i<15;i++)
-                                        {
-                                            wrongButtons[i].setOnClickListener(new View.OnClickListener(){
-                                                @Override
-                                                public void onClick(View v) {
-                                                    soundCorrect=soundCorrect-2;
-                                                    initiatePopupWindow();
-                                                }
-                                            });
-                                        }
+                                        incorrect(12,15);
                                         final ImageButton true5 = (ImageButton) findViewById(R.id.sound5correct);
 
                                         true5.setOnClickListener(new View.OnClickListener(){
                                             @Override
                                             public void onClick(View v) {
                                                 soundCorrect++;
-                                                if(soundCorrect==0){amina="0/5";}
-                                                if(soundCorrect==1){amina="1/5";}
-                                                if(soundCorrect==2){amina="2/5";}
-                                                if(soundCorrect==3){amina="3/5";}
-                                                if(soundCorrect==4){amina="4/5";}
-                                                if(soundCorrect==5){amina="5/5";
+                                                getResult();
+                                                if(soundCorrect==5){mystring="5/5";
 
                                                     Context ctx = getApplicationContext();
                                                     Intent intent = new Intent(ctx, foodGame.class);
@@ -204,7 +127,7 @@ public class GameSound extends AppCompatActivity {
                                                             .setTicker("Klik Entertainment")
                                                             .setContentTitle("Klik Entertainment")
 
-                                                            .setContentText("Your kid did 5/5 in sound game!")
+                                                            .setContentText("Your kid did 5/5 correct in sound game!")
                                                             .setDefaults(Notification.DEFAULT_LIGHTS| Notification.DEFAULT_SOUND)
                                                             .setContentIntent(contentIntent);
 
@@ -216,34 +139,24 @@ public class GameSound extends AppCompatActivity {
 
                                                 SharedPreferences sharedPreferences=getSharedPreferences("MyData", Context.MODE_PRIVATE);
                                                 SharedPreferences.Editor editor=sharedPreferences.edit();
-                                                editor.putString("sound", amina);
+                                                editor.putString("sound", mystring);
                                                 editor.commit();
 
-                                                dachshundSound.stop();
+                                               sound.stop();
+
                                                 Intent menu= new Intent(GameSound.this, MainActivity.class );
 
-
                                                 startActivity(menu);
-
                                             }
                                         });
-
-
-
-
                                     }
                                 });//true4
-
-
                             }
                     });//true3
                     }
                 });//true2
             }
         });//true1
-
-
-
     }
 
     private PopupWindow pwindo;
@@ -268,8 +181,50 @@ public class GameSound extends AppCompatActivity {
         }, 500);
 
     }
+int length;
+    public void onPause() {
+        super.onPause();
+        //sound.stop();
+        sound.pause();
+        length = sound.getCurrentPosition();
 
 
+    }
+
+   public void onResume() {
+        super.onResume();
+        sound.seekTo(length);
+        sound.start();
+
+    }
+
+    void sound(int source)
+    {
+        sound = MediaPlayer.create(GameSound.this, source);
+        sound.start();
+        sound.setLooping(true);
+    }
+    public void incorrect(int i, int imax)
+    {
+        for (i=i; i<imax;i++)
+        {
+            wrongButtons[i].setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    soundCorrect=soundCorrect-2;
+                    initiatePopupWindow();
+                }
+            });
+        }
+    }
+    void getResult()
+    {
+        if(soundCorrect==0){mystring="0/5";}
+        if(soundCorrect==1){mystring="1/5";}
+        if(soundCorrect==2){mystring="2/5";}
+        if(soundCorrect==3){mystring="3/5";}
+        if(soundCorrect==4){mystring="4/5";}
+    }
 }
 
 

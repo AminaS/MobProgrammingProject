@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         menu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
                 Intent menu= new Intent(MainActivity.this, GameSound.class );
 
                 startActivity(menu);
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         menu3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
                 Intent menu1= new Intent(MainActivity.this, GameShadow.class );
 
                 startActivity(menu1);
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         menu2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
                 Intent menu2= new Intent(MainActivity.this, foodGame.class );
 
                 startActivity(menu2);
@@ -68,9 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
         menu4.setOnClickListener(new View.OnClickListener() {
 
+
             @Override
             public void onClick(View v) {
-
+                finish();
                 Intent menu4= new Intent(MainActivity.this, code.class );
 
                 startActivity(menu4);

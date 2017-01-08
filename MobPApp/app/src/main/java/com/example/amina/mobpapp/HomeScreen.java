@@ -13,8 +13,6 @@ public class HomeScreen extends AppCompatActivity {
 
     MediaPlayer homeSong;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -28,34 +26,14 @@ public class HomeScreen extends AppCompatActivity {
         homeSong.setLooping(true);
         final ImageButton playbutton= (ImageButton) findViewById(R.id.playbutton);
 
-
-        /*parent.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent menu4= new Intent(HomeScreen.this, code.class );
-
-                startActivity(menu4);
-
-
-            }
-        });*/
-
-
         playbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent menu= new Intent(HomeScreen.this, MainActivity.class );
-                homeSong.setVolume(0.3f,0.3f);
+                homeSong.setVolume(0.1f,0.1f);
                 startActivity(menu);
-
-
-
             }
         });
-
-
-
 
         RotateAnimation rotate = new RotateAnimation(0, 360,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
@@ -65,16 +43,13 @@ public class HomeScreen extends AppCompatActivity {
         rotate.setRepeatCount(Animation.INFINITE);
         playbutton.setAnimation(rotate);
 
-
-
     }
 
-   int length;
+    int length;
     public void onPause() {
         super.onPause();
-       //homeSong.pause();
+        //homeSong.pause();
         //length = homeSong.getCurrentPosition();
-
 
     }
 
@@ -82,7 +57,6 @@ public class HomeScreen extends AppCompatActivity {
         super.onResume();
         //homeSong.seekTo(length);
         //homeSong.start();
-
     }
-}
 
+}

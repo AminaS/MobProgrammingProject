@@ -23,8 +23,7 @@
         </activity>
 
         <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:noHistory="true">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -33,10 +32,10 @@
         <activity android:name=".GameSound"
             android:screenOrientation="portrait"
             android:noHistory="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-        </intent-filter>
-    </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".GameShadow"
             android:screenOrientation="portrait"
@@ -54,12 +53,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".popupClass"
-            android:theme="@style/AppTheme.custom"
-            android:screenOrientation="portrait">
-
-        </activity>
-
         <activity android:name=".code"
 
             android:screenOrientation="portrait"
@@ -68,10 +61,10 @@
         </activity>
 
         <activity android:name=".gameResults"
-        android:screenOrientation="portrait"
-        android:noHistory="true">
+            android:screenOrientation="portrait"
+            android:noHistory="true">
 
-    </activity>
+        </activity>
 
 
 
