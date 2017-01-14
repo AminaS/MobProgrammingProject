@@ -16,7 +16,8 @@ import android.app.Application;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
-        import android.widget.ImageButton;
+import android.widget.Button;
+import android.widget.ImageButton;
         import android.widget.PopupWindow;
         import android.widget.Toast;
 
@@ -33,7 +34,7 @@ public class foodGame extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    final ImageButton[] wrongButtons = new ImageButton[10];
+    final Button[] wrongButtons = new Button[10];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -44,10 +45,10 @@ public class foodGame extends AppCompatActivity {
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("name", mystring);
         editor.commit();
-        wrongButtons[0]=(ImageButton) findViewById(R.id.imageButton9);
-        wrongButtons[1]=(ImageButton) findViewById(R.id.imageButton11);
+        wrongButtons[0]=(Button) findViewById(R.id.imageButton9);
+        wrongButtons[1]=(Button) findViewById(R.id.imageButton11);
         incorrect(0,2);
-        final ImageButton true1= (ImageButton) findViewById(R.id.food1correct);
+        final Button true1= (Button) findViewById(R.id.food1correct);
 
 
         true1.setOnClickListener(new View.OnClickListener() {
@@ -55,40 +56,40 @@ public class foodGame extends AppCompatActivity {
             public void onClick(View v) {
                 foodCorrect++;
                 setContentView(R.layout.food_layout2);
-                wrongButtons[2]=(ImageButton) findViewById(R.id.imageButton9);
-                wrongButtons[3]=(ImageButton) findViewById(R.id.buttonp);
+                wrongButtons[2]=(Button) findViewById(R.id.imageButton9);
+                wrongButtons[3]=(Button) findViewById(R.id.buttonp);
                 incorrect(2,4);
-                final ImageButton true2 = (ImageButton) findViewById(R.id.food2correct);
+                final Button true2 = (Button) findViewById(R.id.food2correct);
 
                 true2.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
                         foodCorrect++;
                         setContentView(R.layout.food_layout3);
-                        wrongButtons[4]=(ImageButton) findViewById(R.id.imageButton9);
-                        wrongButtons[5]=(ImageButton) findViewById(R.id.button);
+                        wrongButtons[4]=(Button) findViewById(R.id.imageButton9);
+                        wrongButtons[5]=(Button) findViewById(R.id.button);
                         incorrect(4,6);
-                        final ImageButton true3 = (ImageButton) findViewById(R.id.food3correct);
+                        final Button true3 = (Button) findViewById(R.id.food3correct);
 
                         true3.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 foodCorrect++;
                                 setContentView(R.layout.food_layout4);
-                                wrongButtons[6]=(ImageButton) findViewById(R.id.imageButton9);
-                                wrongButtons[7]=(ImageButton) findViewById(R.id.button);
+                                wrongButtons[6]=(Button) findViewById(R.id.imageButton9);
+                                wrongButtons[7]=(Button) findViewById(R.id.button);
                                 incorrect(6,8);
-                                final ImageButton true4 = (ImageButton) findViewById(R.id.food4correct);
+                                final Button true4 = (Button) findViewById(R.id.food4correct);
 
                                 true4.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         setContentView(R.layout.food_layout5);
                                         foodCorrect++;
-                                        wrongButtons[8]=(ImageButton) findViewById(R.id.imageButton9);
-                                        wrongButtons[9]=(ImageButton) findViewById(R.id.apple);
+                                        wrongButtons[8]=(Button) findViewById(R.id.imageButton9);
+                                        wrongButtons[9]=(Button) findViewById(R.id.apple);
                                         incorrect(8,10);
-                                        final ImageButton true5 = (ImageButton) findViewById(R.id.food5correct);
+                                        final Button true5 = (Button) findViewById(R.id.food5correct);
                                         true5.setOnClickListener(new View.OnClickListener(){
                                             @Override
                                             public void onClick(View v) {

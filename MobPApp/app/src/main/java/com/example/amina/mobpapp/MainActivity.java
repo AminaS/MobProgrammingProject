@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_layout);
 
-        final ImageButton menu1= (ImageButton) findViewById(R.id.button2);
-        final ImageButton menu3= (ImageButton) findViewById(R.id.button3);
-        final ImageButton menu2= (ImageButton) findViewById(R.id.button1);
-        final ImageButton menu4 = (ImageButton) findViewById(R.id.button4);
+        final Button menu1= (Button) findViewById(R.id.button2);
+        final Button menu3= (Button) findViewById(R.id.button3);
+        final Button menu2= (Button) findViewById(R.id.button1);
+        final Button menu4 = (Button) findViewById(R.id.button4);
 
 
         menu1.setOnClickListener(new View.OnClickListener() {

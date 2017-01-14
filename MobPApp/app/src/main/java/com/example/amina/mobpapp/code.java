@@ -33,11 +33,11 @@ public class code extends AppCompatActivity {
         boolean alphaType = true;
         int j;
 
-        for(int i = 0; i <= 5; ++i)
+        for(int i = 0; i < 3; ++i)
         {
-            j = (random.nextInt(25) + (alphaType == true ? 65 : 97));
-            randomString.append((char)j);
-            alphaType = !alphaType;
+            j = (random.nextInt(10)+1);
+            randomString.append(j);
+            //alphaType = !alphaType;
         }
 
 

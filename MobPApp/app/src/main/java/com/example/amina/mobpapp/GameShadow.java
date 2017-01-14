@@ -15,6 +15,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.PopupWindow;
 import android.widget.Toast;
@@ -30,7 +31,7 @@ public class GameShadow extends AppCompatActivity {
 
         super.onBackPressed();
     }
-    final ImageButton[] wrongButtons = new ImageButton[10];
+    final Button[] wrongButtons = new Button[10];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -41,11 +42,11 @@ public class GameShadow extends AppCompatActivity {
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("shadow", mystring);
         editor.commit();
-        wrongButtons[0]=(ImageButton) findViewById(R.id.imageButton9);
-        wrongButtons[1]=(ImageButton) findViewById(R.id.shadow2correct);
+        wrongButtons[0]=(Button) findViewById(R.id.imageButton9);
+        wrongButtons[1]=(Button) findViewById(R.id.shadow2correct);
         incorrect(0,2);
 
-        final ImageButton true1= (ImageButton) findViewById(R.id.shadow1correct);
+        final Button true1= (Button) findViewById(R.id.shadow1correct);
 
 
         true1.setOnClickListener(new View.OnClickListener() {
@@ -54,39 +55,39 @@ public class GameShadow extends AppCompatActivity {
                 shadowCorrect++;
 
                 setContentView(R.layout.shadow_layout2);
-                wrongButtons[2]=(ImageButton) findViewById(R.id.imageButton9);
-                wrongButtons[3]=(ImageButton) findViewById(R.id.food2correct);
+                wrongButtons[2]=(Button) findViewById(R.id.imageButton9);
+                wrongButtons[3]=(Button) findViewById(R.id.food2correct);
                 incorrect(2,4);
-                final ImageButton true2 = (ImageButton) findViewById(R.id.shadow2correct);
+                final Button true2 = (Button) findViewById(R.id.shadow2correct);
                 true2.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
                         shadowCorrect++;
                         setContentView(R.layout.shadow_layout3);
-                        wrongButtons[4]=(ImageButton) findViewById(R.id.shadow1correct);
-                        wrongButtons[5]=(ImageButton) findViewById(R.id.shadow2correct);
+                        wrongButtons[4]=(Button) findViewById(R.id.shadow1correct);
+                        wrongButtons[5]=(Button) findViewById(R.id.shadow2correct);
                         incorrect(4,6);
-                        final ImageButton true3 = (ImageButton) findViewById(R.id.shadow3correct);
+                        final Button true3 = (Button) findViewById(R.id.shadow3correct);
                         true3.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 shadowCorrect=shadowCorrect-2;
 
                                 setContentView(R.layout.shadow_layout4);
-                                wrongButtons[6]=(ImageButton) findViewById(R.id.imageButton9);
-                                wrongButtons[7]=(ImageButton) findViewById(R.id.shadow1correct);
+                                wrongButtons[6]=(Button) findViewById(R.id.imageButton9);
+                                wrongButtons[7]=(Button) findViewById(R.id.shadow1correct);
                                 incorrect(6,8);
-                                final ImageButton true4 = (ImageButton) findViewById(R.id.shadow4correct);
+                                final Button true4 = (Button) findViewById(R.id.shadow4correct);
                                 true4.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         shadowCorrect++;
                                         setContentView(R.layout.shadow_layout5);
 
-                                        wrongButtons[8]=(ImageButton) findViewById(R.id.imageButton9);
-                                        wrongButtons[9]=(ImageButton) findViewById(R.id.shadow1correct);
+                                        wrongButtons[8]=(Button) findViewById(R.id.imageButton9);
+                                        wrongButtons[9]=(Button) findViewById(R.id.shadow1correct);
                                         incorrect(8,10);
-                                        final ImageButton true5 = (ImageButton) findViewById(R.id.shadow5correct);
+                                        final Button true5 = (Button) findViewById(R.id.shadow5correct);
 
                                         true5.setOnClickListener(new View.OnClickListener(){
                                             @Override

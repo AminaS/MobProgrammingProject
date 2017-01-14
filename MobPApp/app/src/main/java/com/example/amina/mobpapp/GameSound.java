@@ -16,6 +16,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -34,7 +35,7 @@ public class GameSound extends AppCompatActivity {
 
         super.onBackPressed();
     }
-    final ImageButton[] wrongButtons = new ImageButton[15];
+    final Button[] wrongButtons = new Button[15];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -48,15 +49,15 @@ public class GameSound extends AppCompatActivity {
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("sound", mystring);
         editor.commit();
-        wrongButtons[0]=(ImageButton) findViewById(R.id.horseButton7);
-        wrongButtons[1]=(ImageButton) findViewById(R.id.birdButton7);
-        wrongButtons[2]=(ImageButton) findViewById(R.id.frogButton7);
+        wrongButtons[0]=(Button) findViewById(R.id.horseButton7);
+        wrongButtons[1]=(Button) findViewById(R.id.birdButton7);
+        wrongButtons[2]=(Button) findViewById(R.id.frogButton7);
 
         incorrect(0,3);
 
         sound(R.raw.cow);
 
-        final ImageButton true1= (ImageButton) findViewById(R.id.cowButton7);
+        final Button true1= (Button) findViewById(R.id.cowButton7);
         true1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,11 +66,11 @@ public class GameSound extends AppCompatActivity {
                 setContentView(R.layout.sound_layout2);
                 sound.stop();
                 sound(R.raw.cardinal);
-                wrongButtons[3]=(ImageButton) findViewById(R.id.sound2incorrect1);
-                wrongButtons[4]=(ImageButton) findViewById(R.id.sound2incorrect2);
-                wrongButtons[5]=(ImageButton) findViewById(R.id.sound2incorrect3);
+                wrongButtons[3]=(Button) findViewById(R.id.sound2incorrect1);
+                wrongButtons[4]=(Button) findViewById(R.id.sound2incorrect2);
+                wrongButtons[5]=(Button) findViewById(R.id.sound2incorrect3);
                 incorrect(3,6);
-                final ImageButton true2 = (ImageButton) findViewById(R.id.sound2correct);
+                final Button true2 = (Button) findViewById(R.id.sound2correct);
                 true2.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
@@ -77,11 +78,11 @@ public class GameSound extends AppCompatActivity {
                         sound.stop();
                         setContentView(R.layout.sound_layout3);
                         sound(R.raw.dolphins);
-                        wrongButtons[6]=(ImageButton) findViewById(R.id.sound3incorrect1);
-                        wrongButtons[7]=(ImageButton) findViewById(R.id.sound3incorrect2);
-                        wrongButtons[8]=(ImageButton) findViewById(R.id.sound3incorrect3);
+                        wrongButtons[6]=(Button) findViewById(R.id.sound3incorrect1);
+                        wrongButtons[7]=(Button) findViewById(R.id.sound3incorrect2);
+                        wrongButtons[8]=(Button) findViewById(R.id.sound3incorrect3);
                         incorrect(6,9);
-                        final ImageButton true3 = (ImageButton) findViewById(R.id.sound3correct);
+                        final Button true3 = (Button) findViewById(R.id.sound3correct);
                         true3.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -89,11 +90,11 @@ public class GameSound extends AppCompatActivity {
                                 sound.stop();
                                 setContentView(R.layout.sound_layout4);
                                 sound(R.raw.parrot);
-                                wrongButtons[9]=(ImageButton) findViewById(R.id.sound4incorrect1);
-                                wrongButtons[10]=(ImageButton) findViewById(R.id.sound4incorrect2);
-                                wrongButtons[11]=(ImageButton) findViewById(R.id.sound4incorrect3);
+                                wrongButtons[9]=(Button) findViewById(R.id.sound4incorrect1);
+                                wrongButtons[10]=(Button) findViewById(R.id.sound4incorrect2);
+                                wrongButtons[11]=(Button) findViewById(R.id.sound4incorrect3);
                                 incorrect(9,12);
-                                final ImageButton true4 = (ImageButton) findViewById(R.id.sound4correct);
+                                final Button true4 = (Button) findViewById(R.id.sound4correct);
                                 true4.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
@@ -101,11 +102,11 @@ public class GameSound extends AppCompatActivity {
                                         sound.stop();
                                         setContentView(R.layout.sound_layout5);
                                         sound(R.raw.dachshundb);
-                                        wrongButtons[12]=(ImageButton) findViewById(R.id.sound5incorrect1);
-                                        wrongButtons[13]=(ImageButton) findViewById(R.id.sound5incorrect2);
-                                        wrongButtons[14]=(ImageButton) findViewById(R.id.sound5incorrect3);
+                                        wrongButtons[12]=(Button) findViewById(R.id.sound5incorrect1);
+                                        wrongButtons[13]=(Button) findViewById(R.id.sound5incorrect2);
+                                        wrongButtons[14]=(Button) findViewById(R.id.sound5incorrect3);
                                         incorrect(12,15);
-                                        final ImageButton true5 = (ImageButton) findViewById(R.id.sound5correct);
+                                        final Button true5 = (Button) findViewById(R.id.sound5correct);
 
                                         true5.setOnClickListener(new View.OnClickListener(){
                                             @Override

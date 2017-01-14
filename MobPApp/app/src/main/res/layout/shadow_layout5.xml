@@ -1,64 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/foodback3">
+    android:background="@drawable/shadowgame5">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.14">
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
+        <Button
+            android:id="@+id/sound5incorrect3"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#0000"/>
 
-        <ImageButton
-            android:layout_width="180dp"
-            android:layout_height="270dp"
-            app:srcCompat="@drawable/sharkicon"
-            android:id="@+id/imageButton7"
-            android:layout_marginTop="10dp"
-            android:scaleType="fitXY"
-            android:background="@drawable/qq"/>
-
-        <ImageButton
-            android:layout_width="190dp"
-            android:layout_height="220dp"
-            app:srcCompat="@drawable/sealshadow"
+        <Button
             android:id="@+id/imageButton9"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="15dp"
-            android:scaleType="fitXY"
             android:background="#0000"/>
+    </TableRow>
 
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
 
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.07">
-
-        <ImageButton
-            android:layout_width="180dp"
-            android:layout_height="270dp"
-            app:srcCompat="@drawable/sharkshadow"
+        <Button
             android:id="@+id/shadow5correct"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:layout_marginTop="10dp"
             android:background="#0000"/>
 
-        <ImageButton
-            android:layout_width="180dp"
-            android:layout_height="200dp"
-            app:srcCompat="@drawable/whaleshadow"
+        <Button
             android:id="@+id/shadow1correct"
-            android:scaleType="fitXY"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
             android:background="#0000"/>
-    </LinearLayout>
+    </TableRow>
 
-</LinearLayout>
+</TableLayout>

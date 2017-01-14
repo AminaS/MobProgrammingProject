@@ -1,60 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/soundgame"
-    android:weightSum="1">
+    android:background="@drawable/soundgame2">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
-        <ImageButton
-            android:layout_width="162dp"
-            android:layout_height="224dp"
-            android:scaleType="fitXY"
-            android:background="#0000"
-            app:srcCompat="@drawable/cardinalicon"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/sound2correct" />
+        <Button
+            android:id="@+id/sound2correct"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#0000"/>
 
-        <ImageButton
-            android:layout_width="170dp"
-            android:layout_height="234dp"
-            android:scaleType="fitXY"
-            android:background="#0000"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
-            app:srcCompat="@drawable/squidicon"
-            android:id="@+id/sound2incorrect2" />
+        <Button
+            android:id="@+id/sound2incorrect2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#0000"/>
+    </TableRow>
 
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/sound2incorrect3"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#0000"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/sound2incorrect1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#0000"/>
+    </TableRow>
 
-        <ImageButton
-            android:layout_width="172dp"
-            android:layout_height="204dp"
-            android:scaleType="fitXY"
-            android:background="#0000"
-            android:layout_marginTop="70dp"
-            android:layout_marginLeft="15dp"
-            app:srcCompat="@drawable/lobstericon"
-            android:id="@+id/sound2incorrect3" />
-
-        <ImageButton
-            android:layout_width="152dp"
-            android:layout_height="214dp"
-            android:scaleType="fitXY"
-            android:background="#0000"
-            android:layout_marginTop="70dp"
-            android:layout_marginLeft="20dp"
-            app:srcCompat="@drawable/frogicon"
-            android:id="@+id/sound2incorrect1" />
-    </LinearLayout>
-</LinearLayout>
+</TableLayout>

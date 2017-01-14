@@ -1,65 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/foodback3">
+    android:background="@drawable/foodgame3">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
 
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#0000"/>
 
-
-
-        <ImageButton
-            android:layout_width="175dp"
-            android:layout_height="265dp"
-            app:srcCompat="@drawable/cowicon"
-            android:id="@+id/imageButton7"
-            android:scaleType="fitXY"
-            android:background="@drawable/qq"
-            android:layout_marginTop="10dp"/>
-
-        <ImageButton
-            android:layout_width="500dp"
-            android:layout_height="230dp"
-            app:srcCompat="@drawable/paprika"
+        <Button
             android:id="@+id/imageButton9"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
-            android:scaleType="fitXY"
             android:background="#0000"/>
+    </TableRow>
 
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
 
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageButton
-            android:layout_width="180dp"
-            android:layout_height="230dp"
-            app:srcCompat="@drawable/grass"
+        <Button
             android:id="@+id/food3correct"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:scaleType="fitXY"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="20dp"
             android:background="#0000"/>
 
-        <ImageButton
-            android:layout_width="180dp"
-            android:layout_height="250dp"
-            app:srcCompat="@drawable/bone1"
+        <Button
             android:id="@+id/button"
-            android:scaleType="fitXY"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
             android:background="#0000"/>
-    </LinearLayout>
+    </TableRow>
 
-</LinearLayout>
+</TableLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/animalscreen"
+    android:weightSum="4"
+    android:padding="5dp"> <!-- to show what the parent is -->
+    <LinearLayout
+        android:background="@drawable/kliklogo"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1.5" />
+
+    <LinearLayout
+        android:background="#0000"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="2">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/playbuttonbig"
+            android:scaleType="fitXY"
+            android:background="#0000"
+            android:id="@+id/playbutton"/>
+
+
+    </LinearLayout>
+</LinearLayout>

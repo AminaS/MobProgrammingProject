@@ -18,6 +18,7 @@ public class HomeScreen extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.home_layout);
         final ImageButton parent = (ImageButton) findViewById(R.id.end);
         homeSong = MediaPlayer.create(this, R.raw.oldmacdonald);
